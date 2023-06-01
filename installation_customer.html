@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+	<link rel="icon" href="images/DASHBOARD.jfif">
+	<link rel="stylesheet" href="css/installation_customer.css">
+	<title>Appointments</title>
+</head>
+<body>
+	
+
+	<section id="sidebar">
+		<a href="#" class="brand"><i class='bx bx-wind icon'></i> A.C.S.S</a>
+		<ul class="side-menu">
+			<li><a href="main_customer.html" class="active"><i class='bx bxs-dashboard icon' ></i>Appointments</a></li>
+			<li class="divider" data-text=""></li>
+			<li>
+				<a href="#"><i class='bx bxs-inbox icon' ></i> Your Appointments <i class='bx bx-chevron-right icon-right' ></i></a>
+				<ul class="side-dropdown">
+					<li><a href="installation_customer.html">Installation</a></li>
+					<li><a href="maintenance_customer.html">Maintenance</a></li>
+				</ul>
+			</li>
+		
+		</ul>
+		
+	</section>
+	
+	<section id="content">
+		
+		<nav>
+			<i class='bx bx-menu toggle-sidebar' ></i>
+			<form action="#">
+				<div class="form-group">
+					<input type="text" placeholder="Search...">
+					<i class='bx bx-search icon' ></i>
+				</div>
+			</form>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-bell icon' ></i>
+				<span class="badge">5</span>
+			</a>
+			<a href="#" class="nav-link">
+				<i class='bx bxs-message-square-dots icon' ></i>
+				<span class="badge">8</span>
+			</a>
+			<span class="divider"></span>
+			<div class="profile">
+				<img src="images/perfil-usuario.png" alt="avatar">
+				<ul class="profile-link">
+					<li><a href="#"><i class='bx bxs-user-circle icon' ></i> Profile</a></li>
+					<li><a href="#"><i class='bx bxs-cog' ></i> Settings</a></li>
+					<li><a href="login.html"><i class='bx bxs-log-out-circle' ></i> Logout</a></li>
+				</ul>
+			</div>
+		</nav>
+		<main>
+			<h1 class="title">Appointments</h1>
+			<ul class="breadcrumbs">
+				<li><a href="#">Main</a></li>
+				<li class="divider">/</li>
+				<li><a href="#" class="active">Installation</a></li>
+			</ul>
+		</main>
+	
+
+    <div class="container">
+        <table class="table">
+            <caption></caption>
+            <thead>
+                <tr>
+                    <th>State</th>
+                    <th>Id</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                </tr>
+                
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="State">Confirm</td>
+                    <td data-label="Id">000111</td>
+                    <td data-label="Address">Av 25-5r</td>
+                    <td data-label="City">Krakow</td>
+                    <td data-label="Day">01/04/2023</td>
+                    <td data-label="Time">15:30</td>
+                </tr>
+                <tr>
+                    <td data-label="State">Pending</td>
+                    <td data-label="Id">000222</td>
+                    <td data-label="Address">Av 25-5r</td>
+                    <td data-label="City">Krakow</td>
+                    <td data-label="Day">10/04/2023</td>
+                    <td data-label="Time">10:30</td>
+                </tr>
+                <tr>
+                    <td data-label="State">Pending</td>
+                    <td data-label="Id">000333</td>
+                    <td data-label="Address">Av 25-5r</td>
+                    <td data-label="City">Krakow</td>
+                    <td data-label="Day">20/04/2023</td>
+                    <td data-label="Time">13:00</td>
+                </tr>
+            </tbody>
+        </table>
+		<div class="boton">
+        	<a href="#" class="btn-2">Reschedule</a>
+			<a href="#" class="btn-3">Cancel</a>
+			
+		</div>
+    </div>
+    </section>
+
+
+	
+
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="JS/installation_customer.js"></script>
+</body>
+</html>

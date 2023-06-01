@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: initial;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color:whitesmoke;
+}
+
+header {
+    background-color: #000000;
+    background-position:center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 15vh;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0  auto;
+
+}
+
+.menu {
+    position: absolute;
+    top: 26px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.menu .Logo {
+    font-weight: 700;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 8px 25px;
+    border-radius: 25px;
+    color:rgb(255, 255, 255);
+    display: block;
+}
+
+.menu .navbar ul li a:hover {
+    color:rgb(54, 125, 231);
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label  {
+    cursor: pointer;
+    display: none;
+}
+.header-content {
+    display: flex;
+}
+.banner {
+    width: 100%;
+    height: 500px;
+    animation: banner 10s infinite linear alternate;
+    background-size: 100% 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes banner {
+    0%, 20% {
+        background-image: url(/images/repair\ \(1\).jpg);
+    }
+    25%, 45% {
+        background-image: url(/images/repair1\ \(1\).jpg);
+    }
+    50%, 70% {
+        background-image: url(/images/repair2\ \(1\).jpg);
+    }
+    75%, 100% {
+        background-image: url(/images/repair3\ \(1\).jpg);
+    }
+}
+
+.capa {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+.info {
+    z-index: 1;
+    width: 100%;
+    max-width: 550px;
+    text-align: center;
+}
+
+.info h1 {
+    color: #fff;
+    font-size: 70px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.info p{ 
+    color: #fff;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+
+a.active, a:hover {
+    background: rgb(43, 42, 42);
+    transition: .5s;
+}
+.btn-3 {
+    display: inline-block;
+    background-color: #1c3875;
+    border: 1px solid #080808;
+    margin: 0px 10px 0px 0px;
+    padding: 15px 25px;
+    color:white;
+    border-radius: 25px;
+}
+
+.btn-3:hover {
+    background-color: #f3f3fa;
+
+}
+
+.wall {
+    background-color: #373d44;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+    padding: 100px;
+
+}
+.porfolios {
+    padding: 0px 0px;
+    text-align: left;
+    color:#000000;
+}
+
+.porfolios h2 {
+    font-size: 55px;
+}
+.porfolio {
+    display:contents;
+}
+
+.porfolio-1 {
+    
+    margin-left: 10px;
+}
+
+.porfolio-1 h3 {
+    text-align:left;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.porfolio-1 p {
+    text-align: left;
+    font-size: 18px;
+    color: #525254;
+    margin-bottom: 25px;
+}
+
+.porfolio-2 {
+    margin-left: 10px;
+}
+
+.porfolio-2 h3 {
+    text-align: left;
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+.porfolio-2 p {
+    text-align: left;
+    font-size: 18px;
+    color: #525254;
+    margin-bottom: 25px;
+}
+.btn-2 {
+    display: inline-block;
+    
+    padding: 15px 25px;
+    border-radius: 25px;
+    background-color:#1c3875;
+    color:rgb(255, 255, 255);
+}
+
+.btn-2:hover {
+    background-color:rgb(105, 164, 253);
+}
+
+.contenedor-acordeon {
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 80px;
+}
+.contenedor-acordeon h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+.acordeon {
+    background: #fff;
+}
+.acordeon label {
+    display: block;
+    padding: 20px;
+    font-size: 20px;
+    background: #000000;
+    color: #f3f3fa;
+    cursor: pointer;
+    margin-bottom: 2px;
+    transition: all 300ms ease;
+}  
+.acordeon label:hover {
+    background: #373d44;
+}
+.acordeon .contenido-acordeon {
+    padding: 0px;
+    margin: 0px 20px;
+    max-height: 0px;
+    overflow:hidden;
+    transition: all 300ms ease;
+}
+.btn-acordeon:checked ~ .contenido-acordeon {
+    max-height: 600px;
+    padding: 15px 0px;
+}
+.btn-acordeon {
+    display:none;
+}
+
+.boton {
+    text-align: center;
+    padding: 20px 0px;
+    margin: 35px 10px 35px 0px;
+}
+.footer {
+    background-color: black;
+    padding: 50px 0;
+}
+.footer-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer-links {
+    width: 25%;
+    padding: 0 15px;
+}
+.footer-links h4 {
+    font-size: 20px;
+    color: azure;
+    margin-bottom: 25px;
+    font-weight: 500;
+    border-bottom: 2px solid #002fff;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.footer-links ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    color:beige;
+    display:block;
+    margin-bottom: 15px;
+    transition: all .3s ease;
+}
+.footer-links ul li a:hover {
+    color: #ffffff;
+    padding-left: 6px;
+
+}
+.social-link a {
+    display: inline-block;
+    min-height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all .5s ease;
+}
+
+.social-link a:hover {
+    background-color: rgb(25, 68, 148);
+}
+@media (max-width:991px) {
+    .menu {
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        display: none;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+    
+
+    header {
+        height: 0vh;
+        padding: 70px 0px;
+        background-position: center center;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 0px 30px;
+    }
+
+    a.active, a:hover {
+        background: none;
+        color: rgb(15, 15, 15);
+        text-shadow: 0 10px 15px rgb(21, 58, 219);
+    }
+    .btn-3 {
+        background:none;
+        border: black;
+        
+    }
+    .btn-3:hover {
+        background-color:rgb(0, 0, 0);
+        
+    
+    }
+    .wall {
+        font-size: 40px;
+        color: #f3f3fa;
+        
+    }
+
+    a.wall {
+        text-align: center;
+    }
+
+    
+
+    .contenedor-acordeon {
+        width: 90%;
+    }
+    .footer-row {
+        text-align: center;
+    }
+    .footer-links {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    
+}
+
