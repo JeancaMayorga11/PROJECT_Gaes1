@@ -2,6 +2,8 @@
 
 include("agen_conexion.php");
 
+
+$citas = "SELECT * FROM Cita";
 $usuarios = "SELECT * FROM Usuario";
 ?>
 
@@ -18,27 +20,29 @@ $usuarios = "SELECT * FROM Usuario";
     <div class="container-table">
 
         <div class="table__title">User information <a href="crud.php" class="title_update">Actualización</a></div>
-        <div class="table__header">Name</div>
-        <div class="table__header">Email</div>
-        <div class="table__header">ID number</div>
-        <div class="table__header">Telephone</div>
-        <div class="table__header">Address</div>
-        <div class="table__header">City of residence</div>
-        <div class="table__header">Day of installation</div>
-        <div class="table__header">Time of installation</div>
+        <div class="table__header">Nombre</div>
+        <div class="table__header">Correo electrónico</div>
+        <div class="table__header">Número de documento</div>
+        <div class="table__header">Número de clular</div>
+        <div class="table__header">?Dirección</div>
+        <div class="table__header">Ciudad de residencia</div>
+        <div class="table__header">fecha de instalación</div>
+        <div class="table__header">Horario de instalación</div>
 
-        <?php $resultado = mysqli_query($connect, $usuarios);
+        <?php $resultado = mysqli_query($connect, $citas, $usuarios);
 
         while($row=mysqli_fetch_assoc($resultado)) { ?>
 
-            <div class="table__item"><?php echo $row["Nombre_usuario"];?></div>
-            <div class="table__item"><?php echo $row["Email_usuario"];?></div>
-            <div class="table__item"><?php echo $row["Numero_documento"];?></div>
+            <div class="table__item"><?php echo $row["ID_usuario"];?></div>
+            <div class="table__item"><?php echo $row["Email"];?></div>
+            <div class="table__item"><?php echo $row["Nombre_completo"];?></div>
+            <div class="table__item"><?php echo $row["telefono"];?></div>
             <div class="table__item"><?php echo $row["Numero_celular"];?></div>
+
+            <div class="table__item"><?php echo $row["Ciudad"];?></div>
             <div class="table__item"><?php echo $row["Direccion"];?></div>
-            <div class="table__item"><?php echo $row["Ciudad_del_usuario"];?></div>
-            <div class="table__item"><?php echo $row["Dia_de_instalacion"];?></div>
-            <div class="table__item"><?php echo $row["Hora_de_instalacion"];?></div>
+            <div class="table__item"><?php echo $row["FechaVisita"];?></div>
+            <div class="table__item"><?php echo $row["HoraVisita"];?></div>
 
             <?php } mysqli_free_result($resultado);?>
 
