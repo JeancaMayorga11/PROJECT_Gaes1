@@ -1,10 +1,3 @@
-# gui-gaes1-a-c-s-s
-gui-gaes1-a-c-s-s created by GitHub Classroom
+# PROJECT_Gaes1
 
-Integrantes: 
-Jean Carlo Mayorga
-Dylan David Valencia
-Maria Fernanda Mejía
-Sergio Pulido
-Proyecto: A.C.S.S
-
+En esta rama se guarda todo lo relacionado con las interfaces del proyecto ACSS, es decir el frontend de la página web del proyecto basado en html, js y css.
