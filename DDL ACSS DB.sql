@@ -14,6 +14,8 @@ Clave varchar (32) not null,
 Nombres varchar(30) not null,
 Apellidos varchar (30) not null,
 Telefono bigint (15) not null,
+Ciudad varchar(12) not null,
+Direccion varchar (25) not null,
 Tipoidentificacion  varchar (15) not null,
 fk_ID_habilitado bigint (12) not null,
 foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
@@ -30,8 +32,6 @@ foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 CREATE TABLE Cita(
 ID_cita bigint (12) not null primary key,
-Ciudad varchar(12) not null,
-Direccion varchar (25) not null,
 FechaVisita datetime(6) null,
 HoraVisita time(6) null,
 TipoServicio varchar(25) not null,
