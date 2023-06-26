@@ -36,8 +36,10 @@ FechaVisita datetime(6) null,
 HoraVisita time(6) null,
 TipoServicio varchar(25) not null,
 fk_ID_perfil bigint (12),
+fk_ID_usuario bigint (12),
 fk_ID_habilitado bigint(12),
 foreign key(fk_ID_perfil) references Perfil (ID_perfil),
+foreign key(fk_ID_usuario) references Usuario (ID_usuario),
 foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
