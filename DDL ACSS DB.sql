@@ -61,11 +61,11 @@ Estado varchar(10) not null,
 Precio int(10) not null,
 fk_ID_perfil bigint(12),
 fk_ID_cita bigint(12),
-fk_ID_Numero_referencia bigint(12),
+fk_Numero_referencia bigint(12),
 fk_ID_habilitado bigint(12),
 Foreign key(fk_ID_perfil) references perfil (ID_perfil),
 Foreign key(fk_ID_cita) references cita (ID_cita),
-Foreign key(fk_ID_numero_referencia) references equipo (Numero_referencia),
+Foreign key(fk_Numero_referencia) references equipo (Numero_referencia),
 foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
