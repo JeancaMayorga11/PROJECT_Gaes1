@@ -30,10 +30,10 @@ foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 CREATE TABLE Cita(
 ID_cita bigint (12) not null primary key auto_increment,
-FechaVisita datetime(6) null,
-HoraVisita time(6) null,
 Ciudad varchar(12) not null,
 Direccion varchar (25) not null,
+FechaVisita datetime(6) null,
+HoraVisita time(6) null,
 TipoServicio varchar(25) not null,
 fk_ID_perfil bigint (12),
 fk_ID_usuario bigint (12),
