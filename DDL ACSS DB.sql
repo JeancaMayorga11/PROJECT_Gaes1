@@ -8,7 +8,7 @@ Nombre varchar(10) not null);
 
 
 CREATE TABLE Usuario(
-ID_usuario bigint (12) not null primary key auto_increment,
+ID_usuario bigint (12) not null primary key,
 Email varchar (30) not null,
 Clave varchar (32) not null,
 Nombres varchar(30) not null,
@@ -31,7 +31,7 @@ foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
 CREATE TABLE Cita(
-ID_cita bigint (12) not null primary key,
+ID_cita bigint (12) not null primary key auto_increment,
 FechaVisita datetime(6) null,
 HoraVisita time(6) null,
 TipoServicio varchar(25) not null,
@@ -69,7 +69,7 @@ foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
 CREATE TABLE Elemento(
-COD_elemento bigint (12) not null primary key,
+COD_elemento bigint (12) not null primary key auto_increment,
 Nombre varchar (12),
 Cantidad int(4),
 Precio Float(12) not null,
