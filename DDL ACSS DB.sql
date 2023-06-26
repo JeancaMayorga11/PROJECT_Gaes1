@@ -8,7 +8,7 @@ Nombre varchar(10) not null);
 
 
 CREATE TABLE Usuario(
-ID_usuario bigint (12) not null primary key,
+ID_usuario bigint (12) not null primary key auto_increment,
 Email varchar (30) not null,
 Clave varchar (32) not null,
 Nombres varchar(30) not null,
