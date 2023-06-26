@@ -81,7 +81,7 @@ foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
 CREATE TABLE Elemento(
-COD_elemento bigint (12) not null primary key,
+COD_elemento bigint (12) not null primary key auto_increment,
 Nombre varchar (12),
 Cantidad int(4),
 Precio Float(12) not null,
