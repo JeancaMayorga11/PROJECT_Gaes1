@@ -1,8 +1,10 @@
 <?php
 
-include("agen_conexion.php");
+include("inst_conexion.php");
 
-$usuarios = "SELECT * FROM estudiante";
+$citas = "SELECT * FROM Cita";
+$usuarios = "SELECT * FROM Usuario";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

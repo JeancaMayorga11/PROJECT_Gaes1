@@ -1,9 +1,12 @@
 <?php
 
-include("agen_conexion.php");
-$id = $_GET["id"];
+include("inst_conexion.php");
+$idU = $_GET["idU"];
+$idC = $_GET["idC"];
 
-$estudiantes = "SELECT * FROM Usuario WHERE ID_usuario = '$id'";
+$usuarios = "SELECT * FROM Usuario WHERE ID_usuario = '$idU'";
+$citas = "SELECT * FROM Cita WHERE ID_cita = '$idC'";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,17 +30,17 @@ $estudiantes = "SELECT * FROM Usuario WHERE ID_usuario = '$id'";
         <div class="table__header">Day of installation</div>
         <div class="table__header">Time of installation</div>
 
-        <?php $resultado = mysqli_query($connect, $usuarios);
+        <?php $resultado = mysqli_query($connect, $usuarios, $citas);
 
         while($row=mysqli_fetch_assoc($resultado)) { ?>
 
-            <input type="hidden" class="table__item" value="<?php echo $row["ID_estudiante"];?>" name="id">
-            <input type="text" class="table__input" value="<?php echo $row["Nombre_usuario"];?>" name="nombre">
-            <input type="text" class="table__input" value="<?php echo $row["Email_usuario"];?>" name="mail">
-            <input type="text" class="table__input" value="<?php echo $row["Numero_documento"];?>" name="document">
-            <input type="text" class="table__input" value="<?php echo $row["Numero_celular"];?>" name="phone">
+            <input type="hidden" class="table__item" value="<?php echo $row["ID_usuario"];?>" name="id">
+            <input type="text" class="table__input" value="<?php echo $row["Email"];?>" name="mail">
+            <input type="text" class="table__input" value="<?php echo $row["Nombre"];?>" name="nombre">
+            <input type="text" class="table__input" value="<?php echo $row["Telefono"];?>" name="phone">
+            <input type="text" class="table__input" value="<?php echo $row["Ciudad"];?>" name="city">
             <input type="text" class="table__input" value="<?php echo $row["Direccion"];?>" name="address">
-            <input type="text" class="table__input" value="<?php echo $row["Ciudad_del_usuario"];?>" name="city">
+
             <input type="text" class="table__input" value="<?php echo $row["Dia_de_instalacion"];?>" name="date">
             <input type="text" class="table__input" value="<?php echo $row["Hora_de_instalacion"];?>" name="time">
             <input type="submit" value="Actualizar" class="container__submit container__submit--actualizar">

@@ -1,6 +1,6 @@
 <?php
 
-include("agen_conexion.php");
+include("inst_conexion.php");
 
 
 $citas = "SELECT * FROM Cita";
@@ -35,12 +35,11 @@ $usuarios = "SELECT * FROM Usuario";
 
             <div class="table__item"><?php echo $row["ID_usuario"];?></div>
             <div class="table__item"><?php echo $row["Email"];?></div>
-            <div class="table__item"><?php echo $row["Nombre_completo"];?></div>
-            <div class="table__item"><?php echo $row["telefono"];?></div>
-            <div class="table__item"><?php echo $row["Numero_celular"];?></div>
-
+            <div class="table__item"><?php echo $row["Nombres"];?></div>
+            <div class="table__item"><?php echo $row["Telefono"];?></div>
             <div class="table__item"><?php echo $row["Ciudad"];?></div>
             <div class="table__item"><?php echo $row["Direccion"];?></div>
+
             <div class="table__item"><?php echo $row["FechaVisita"];?></div>
             <div class="table__item"><?php echo $row["HoraVisita"];?></div>
 
