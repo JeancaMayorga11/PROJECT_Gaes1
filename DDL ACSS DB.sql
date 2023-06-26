@@ -6,14 +6,6 @@ CREATE TABLE Habilitado(
 ID_habilitado bigint(12) not null primary key,
 Nombre varchar(10) not null);
 
-CREATE TABLE Rol(
-ID_rol bigint(12) not null primary key,
-Nom_rol varchar(15) not null,
-fk_ID_usuario bigint(12) not null,
-fk_ID_habilitado bigint(12) not null,
-fk_ID_perfil bigint(12) not null,
-foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
-
 
 CREATE TABLE Usuario(
 ID_usuario bigint (12) not null primary key,
@@ -23,33 +15,30 @@ Nombres varchar(30) not null,
 Apellidos varchar (30) not null,
 Telefono bigint (15) not null,
 Tipoidentificacion  varchar (15) not null,
-fk_ID_rol bigint(12) not null,
 fk_ID_habilitado bigint (12) not null,
-foreign key(fk_ID_rol) references Rol (ID_rol),
 foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
 CREATE TABLE Perfil(
 ID_perfil bigint(12) not null primary key,
 Nombre varchar(15) not null,
-fk_ID_rol bigint(12) not null,
 fk_ID_usuario bigint(12) not null,
 fk_ID_habilitado bigint(12)not null,
-foreign key(fk_ID_rol) references Rol (ID_rol),
 foreign key(fk_ID_usuario) references Usuario (ID_usuario),
 foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
 CREATE TABLE Cita(
-ID_cita bigint (12) not null primary key,
+ID_cita bigint (12) not null primary key auto_increment,
 Ciudad varchar(12) not null,
 Direccion varchar (25) not null,
 FechaVisita datetime(6) null,
 HoraVisita time(6) null,
-TipoServicio varchar(25) not null,
 fk_ID_perfil bigint (12),
+fk_ID_usuario bigint (12),
 fk_ID_habilitado bigint(12),
 foreign key(fk_ID_perfil) references Perfil (ID_perfil),
+foreign key(fk_ID_usuario) references Usuario (ID_usuario),
 foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
@@ -72,11 +61,11 @@ Estado varchar(10) not null,
 Precio int(10) not null,
 fk_ID_perfil bigint(12),
 fk_ID_cita bigint(12),
-fk_ID_Numero_referencia bigint(12),
+fk_Numero_referencia bigint(12),
 fk_ID_habilitado bigint(12),
 Foreign key(fk_ID_perfil) references perfil (ID_perfil),
 Foreign key(fk_ID_cita) references cita (ID_cita),
-Foreign key(fk_ID_numero_referencia) references equipo (Numero_referencia),
+Foreign key(fk_Numero_referencia) references equipo (Numero_referencia),
 foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
@@ -134,15 +123,3 @@ fk_ID_perfil bigint(10) not null,
 fk_COD_elemento bigint(10) not null,
 foreign key(fk_ID_perfil) references Perfil (ID_perfil), 
 foreign key(fk_COD_elemento) references Elemento (COD_elemento));
-
-
-
-
-
-
-
-
-
-
-
-
