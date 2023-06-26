@@ -3,8 +3,8 @@ CREATE DATABASE ACSS;
 USE ACSS;
 
 CREATE TABLE Habilitado(
-ID_habilitado bigint(12) not null primary key,
-Nombre varchar(10) not null);
+Activo varchar(10) not null,
+Inactivo varchar(10) not null);
 
 
 CREATE TABLE Usuario(
