@@ -6,14 +6,6 @@ CREATE TABLE Habilitado(
 ID_habilitado bigint(12) not null primary key,
 Nombre varchar(10) not null);
 
-CREATE TABLE Rol(
-ID_rol bigint(12) not null primary key,
-Nom_rol varchar(15) not null,
-fk_ID_usuario bigint(12) not null,
-fk_ID_habilitado bigint(12) not null,
-fk_ID_perfil bigint(12) not null,
-foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
-
 
 CREATE TABLE Usuario(
 ID_usuario bigint (12) not null primary key,
@@ -23,19 +15,15 @@ Nombres varchar(30) not null,
 Apellidos varchar (30) not null,
 Telefono bigint (15) not null,
 Tipoidentificacion  varchar (15) not null,
-fk_ID_rol bigint(12) not null,
 fk_ID_habilitado bigint (12) not null,
-foreign key(fk_ID_rol) references Rol (ID_rol),
 foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
 CREATE TABLE Perfil(
 ID_perfil bigint(12) not null primary key,
 Nombre varchar(15) not null,
-fk_ID_rol bigint(12) not null,
 fk_ID_usuario bigint(12) not null,
 fk_ID_habilitado bigint(12)not null,
-foreign key(fk_ID_rol) references Rol (ID_rol),
 foreign key(fk_ID_usuario) references Usuario (ID_usuario),
 foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
