@@ -8,7 +8,7 @@
         <meta charset="UTF-8">
         <title>Installation</title>
         <link rel="icon" href="images/installation.jfif">
-        <link rel="stylesheet" href="css/agendar.css">
+        <link rel="stylesheet" href="Citas Project/css/agendar.css">
         <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
@@ -103,7 +103,7 @@
 
                 <br>
                                    
-            <button type="submit" name="enviar_formulario" id="enviar"><p>Agendar cita</p></button>
+            <a type="submit" name="enviar_formulario" id="enviar"><p>Agendar cita</p></a>
             </form>
         
         </div>

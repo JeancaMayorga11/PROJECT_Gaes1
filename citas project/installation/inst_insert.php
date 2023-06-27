@@ -7,16 +7,16 @@ $nombre = $_POST['name'];
 $email = $_POST['correo'];
 $identificacion = $_POST['id_cliente'];
 $celular = $_POST['telephone'];
+
 $direccion = $_POST['adress'];
 $ciudad = $_POST['city'];
-
 $f_inst = $_POST['date'];
 $h_inst = $_POST['time'];
 
 
 
 
-$insertar = "INSERT INTO Cita (FechaVisita, HoraVisita) VALUES ('$f_inst','$h_inst')";
+$insertar = "INSERT INTO Cita (Ciudad, Direccion, FechaVisita, HoraVisita) VALUES ('$ciudad', '$direccion','$f_inst','$h_inst')";
 
 
 $resultado = mysqli_query($connect, $insertar);

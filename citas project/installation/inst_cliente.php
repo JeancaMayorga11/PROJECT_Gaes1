@@ -4,8 +4,6 @@ class Cliente{
     public $email;
     public $identificacion;
     public $celular;
-    public $direccion;
-    public $ciudad;
 
     // Método constructor para inicializar los atributos.
     public function __construct(){
@@ -13,17 +11,15 @@ class Cliente{
         $this->email = "";
         $this->identificacion = null;
         $this->celular = null;
-        $this->direccion = null;
-        $this->ciudad = null;
+     
     }
     // Función para crear cliente.
-    public function crearCliente($nombre, $email, $identificacion, $celular, $direccion, $ciudad){
+    public function ConsultarCliente($nombre, $email, $identificacion, $celular, $direccion, $ciudad){
         $this->nombre = $nombre;
         $this->email = $email;
         $this->identificacion = $identificacion;
         $this->celular = $celular;
-        $this->direccion = $direccion;
-        $this->ciudad = $ciudad;
+
 
         return [$this->nombre, $this->identificacion];
     }
@@ -33,9 +29,7 @@ class Cliente{
             echo "<br>Nombre: ".$this->nombre;
             echo "<br>Correo electrónico: ".$this->email;
             echo "<br>N° Documento: ".$this->identificacion;
-            echo "<br>Número de celular: ".$this->celular;
-            echo "<br>Dirección de residencia: ".$this->direccion;      
-            echo "<br>Ciudad de residencia: ".$this->ciudad;   
+            echo "<br>Número de celular: ".$this->celular; 
         }
     }
     // Función para validar datos.
