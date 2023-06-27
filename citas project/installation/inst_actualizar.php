@@ -21,14 +21,14 @@ $citas = "SELECT * FROM Cita WHERE ID_cita = '$idC'";
     <form class="container-table container-table--edit" action="procesar.php" method="post">
         
     <div class="table__title table__title--edit">User information</div>
-    <div class="table__header">Name</div>
-        <div class="table__header">Email</div>
-        <div class="table__header">ID number</div>
-        <div class="table__header">Telephone</div>
-        <div class="table__header">Address</div>
-        <div class="table__header">City of residence</div>
-        <div class="table__header">Day of installation</div>
-        <div class="table__header">Time of installation</div>
+    <div class="table__header">nombre</div>
+        <div class="table__header">Correo electrónico</div>
+        <div class="table__header">ID</div>
+        <div class="table__header">Telefono</div>
+        <div class="table__header">Dirección</div>
+        <div class="table__header">Ciudad de residencia</div>
+        <div class="table__header">fecha de instalación</div>
+        <div class="table__header">Tiempo de instalación</div>
 
         <?php $resultado = mysqli_query($connect, $usuarios, $citas);
 
