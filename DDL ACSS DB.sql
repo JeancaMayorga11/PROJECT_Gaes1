@@ -7,7 +7,7 @@ ID_habilitado bigint(12) not null primary key,
 Nombre varchar(10) not null);
 
 
-CREATE TABLE usuario (
+CREATE TABLE Usuario (
 ID_usuario bigint(12) NOT NULL AUTO_INCREMENT,
 Email varchar(30) NOT NULL,
 Clave varchar(32) NOT NULL,
@@ -23,7 +23,7 @@ foreign key (fk_ID_perfil) references Perfil (ID_perfil));
 
 
 
-CREATE TABLE perfil (
+CREATE TABLE Perfil (
 ID_perfil bigint(12) NOT NULL AUTO_INCREMENT,
 Cargo varchar(15) NOT NULL,
 PRIMARY KEY (ID_perfil));
