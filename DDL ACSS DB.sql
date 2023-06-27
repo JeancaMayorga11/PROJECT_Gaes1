@@ -5,28 +5,29 @@ USE ACSS;
 CREATE TABLE Habilitado(
 ID_habilitado bigint(12) not null primary key,
 Nombre varchar(10) not null);
-
-
-CREATE TABLE Usuario (
-ID_usuario bigint(12) NOT NULL AUTO_INCREMENT,
-Email varchar(30) NOT NULL,
-Clave varchar(32) NOT NULL,
-Nombres varchar(30) NOT NULL,
-Apellidos varchar(30) NOT NULL,
-Telefono bigint(15) NOT NULL,
-Tipoidentificacion varchar(15) NOT NULL,
-fk_ID_habilitado bigint(12) NOT NULL,
-fk_ID_perfil bigint(12) NOT NULL,
-PRIMARY KEY (ID_usuario),
-foreign key (fk_ID_habilitado) references Habilitado (ID_habilitado),
-foreign key (fk_ID_perfil) references Perfil (ID_perfil));
-
-
+ 
 
 CREATE TABLE Perfil (
 ID_perfil bigint(12) NOT NULL AUTO_INCREMENT,
 Cargo varchar(15) NOT NULL,
 PRIMARY KEY (ID_perfil));
+
+
+
+CREATE TABLE Usuario(
+ID_usuario bigint (12) not null primary key AUTO_INCREMENT,
+Email varchar (30) not null,
+Contraseña varchar (32) not null,
+Nombres varchar(30) not null,
+Apellidos varchar (30) not null,
+NumeroC bigint (15) not null,
+identificación  varchar (15) not null,
+fk_ID_habilitado bigint(12) NOT NULL,
+fk_ID_perfil bigint(12) NOT NULL,
+foreign key (fk_ID_habilitado) references Habilitado (ID_habilitado),
+foreign key (fk_ID_perfil) references Perfil (ID_perfil));
+
+
 
 
 CREATE TABLE Cita(
@@ -43,29 +44,18 @@ foreign key(fk_ID_usuario) references Usuario (ID_usuario),
 foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
-CREATE TABLE Equipo(
-Numero_referencia bigint(12) not null primary key,
-Nombre varchar(10) null,
-Estado varchar(10) not null,
-Marca varchar(10) not null,
-fk_ID_perfil bigint(12),
-fk_ID_habilitado bigint(12),
-foreign key(fk_ID_perfil) references perfil (ID_perfil),
-foreign key(fk_ID_habilitado) references habilitado (ID_habilitado));
+
 
 
 CREATE TABLE Servicio(
 ID_servicio bigint(12) not null primary key,
-Descripcion text null,
 Tipo varchar(30) not null,
 Estado varchar(10) not null,
 fk_ID_perfil bigint(12),
 fk_ID_cita bigint(12),
-fk_Numero_referencia bigint(12),
 fk_ID_habilitado bigint(12),
 Foreign key(fk_ID_perfil) references perfil (ID_perfil),
 Foreign key(fk_ID_cita) references cita (ID_cita),
-Foreign key(fk_Numero_referencia) references equipo (Numero_referencia),
 foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
