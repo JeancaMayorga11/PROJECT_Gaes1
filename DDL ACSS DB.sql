@@ -14,14 +14,14 @@ PRIMARY KEY (ID_perfil));
 
 
 
-CREATE TABLE Usuario(
-ID_usuario bigint (12) not null primary key AUTO_INCREMENT,
-Email varchar (30) not null,
-Contraseña varchar (32) not null,
-Nombres varchar(30) not null,
-Apellidos varchar (30) not null,
-NumeroC bigint (15) not null,
-identificación  varchar (15) not null,
+CREATE TABLE Usuario (
+ID_usuario bigint(12) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
+Email varchar(30) NOT NULL,
+Clave varchar(32) NOT NULL,
+Nombres varchar(30) NOT NULL,
+Apellidos varchar(30) NOT NULL,
+Telefono bigint(15) NOT NULL,
+Tipoidentificacion varchar(15) NOT NULL,
 fk_ID_habilitado bigint(12) NOT NULL,
 fk_ID_perfil bigint(12) NOT NULL,
 foreign key (fk_ID_habilitado) references Habilitado (ID_habilitado),
@@ -49,6 +49,7 @@ foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 CREATE TABLE Servicio(
 ID_servicio bigint(12) not null primary key,
+Descripcion text null,
 Tipo varchar(30) not null,
 Estado varchar(10) not null,
 fk_ID_perfil bigint(12),
@@ -113,15 +114,3 @@ fk_ID_perfil bigint(10) not null,
 fk_COD_elemento bigint(10) not null,
 foreign key(fk_ID_perfil) references Perfil (ID_perfil), 
 foreign key(fk_COD_elemento) references Elemento (COD_elemento));
-
-
-
-
-
-
-
-
-
-
-
-
