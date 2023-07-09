@@ -16,7 +16,7 @@
     <header>
         <div class="menu container">
 
-            <a href="index.html" class="Logo">A.C.S.S</a>
+            <a href="index.php" class="Logo">A.C.S.S</a>
             <input type="checkbox" id="menu">
             <label for="menu">
                 <img src="images/menu-btn.png" class="menu.icono" alt="">
@@ -24,19 +24,18 @@
 
             <nav class="navbar">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="login.html" class="btn-3">Sign in</a></li>
-                    <li><a href="registro.html" class="btn-3">Sign up</a></li>
+                    <li><a href="#" class="active">Inicio</a></li>
+                    <li><a href="services.html">Servicios</a></li>
+                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="login.php" class="btn-3">Iniciar sesión</a></li>
+                    <li><a href="registro.php" class="btn-3">Registrarse</a></li>
 
                 </ul>
             </nav>
         </div>
         <div class="header-content container">
             <div class="content">
-                <h1>Air Conditioner Support System</h1>
+                <h1>Sistema de soporte de aire acondicionado</h1>
             </div>
             <img src="images/acss-removebg-preview__1_-removebg-preview.png" alt="">
         </div>
@@ -46,8 +45,8 @@
             <img src="images/rotenso (1) (1).png" width="100px" height="100px" alt="">
             <h3>Rotenso</h3>
             <p>
-                Devices with a wide energy efficiency, prioritizing the necessity to rationalize the
-                energy costs and take care of natural environment.
+                Dispositivos con una amplia eficiencia energética, priorizando la necesidad de racionalizar la
+                costos de energía y cuidar el medio ambiente natural.
             </p>
             <br>
             <img src="images/rotensoair (1).jpeg" width="125px" height="125px" alt="">
@@ -58,8 +57,8 @@
             <img src="images/lg-electronics (1).png" width="100px" height="100px" alt="">
             <h3>LG</h3>
             <p>
-                It has a wide range of residential air conditioners.
-                Inverter Technology provides maximum energy savings and faster cooling with WiFi.
+                Dispone de una amplia gama de aires acondicionados residenciales.
+                La tecnología Inverter proporciona el máximo ahorro de energía y una refrigeración más rápida con WiFi.
             </p>
             <br>
             <img src="images/lgairr (1).jpg" width="150px" height="150px" alt="">
@@ -68,8 +67,8 @@
             <img src="images/gree-logo (1).png" width="100px" height="100px" alt="">
             <h3> Gree</h3>
             <p>
-                One of the main manufacturers of heating and air conditioners systems in the world,
-                it's committed to design the systems without more advanced ducts and ecological in the planet.
+                Uno de los principales fabricantes de sistemas de calefacción y aire acondicionado del mundo,
+                se compromete a diseñar los sistemas sin conductos más avanzados y ecológicos del planeta.
             </p>
             <img src="images/greeair (1).jpg" width="150px" height="150px" alt="">
         </div>
@@ -77,9 +76,9 @@
             <img src="images/icons8-mitsubishi-96.png" alt="">
             <h3>Mitsubishi</h3>
             <p>
-                A world leader in air conditioning systems for residential,
-                commercial and industrial use. It creates air conditioning systems that provide efficiency
-                performance in a wide range of climatic conditions.
+                Líder mundial en sistemas de aire acondicionado para uso residencial,
+                uso comercial e industrial. Crea sistemas de climatización que aportan eficiencia
+                rendimiento en una amplia gama de condiciones climáticas.
             </p>
 
             <img src="images/mitsubishiair (1).jpg" width="150px" height="150px" alt="">
@@ -89,35 +88,35 @@
         <div class="porfolio">
             <img src="images/experience-transfer.png" alt="">
             <div class="porfolio-1">
-                <h3>Experience</h3>
+                <h3>Experiencia</h3>
                 <p>
-                    Throughout 6 years we have been providing our services of maintenance and repair of air
-                    conditioners, always offering the best brands to our customers.
+                    A lo largo de 6 años venimos brindando nuestros servicios de mantenimiento y reparación de aire
+                    acondicionadores, ofreciendo siempre las mejores marcas a nuestros clientes.
                 </p>
-                <a href="#" class="btn-2">Information</a>
+                <a href="#" class="btn-2">Información</a>
             </div>
         </div>
         <div class="porfolio">
             <div class="porfolio-2">
-                <h3>Projects</h3>
+                <h3>Proyectos</h3>
                 <p>
-                    We want to make our services known in different cities, for the moment in Poland, in the future we
-                    will think about becoming a global company.
+                    Queremos dar a conocer nuestros servicios en diferentes ciudades, 
+                    de momento en Polonia, en un futuro pensaremos en convertirnos en una empresa global.
 
                 </p>
-                <a href="#" class="btn-2">Information</a>
+                <a href="#" class="btn-2">Información</a>
             </div>
             <img src="images/project.png" alt="">
         </div>
         <div class="porfolio">
             <img src="images/process.png" alt="">
             <div class="porfolio-3">
-                <h3>Executed</h3>
+                <h3>Ejecutado</h3>
                 <p>
-                    Our works are of the best quality, always prioritizing the needs and welfare of the customer, we
-                    also have a wide variety of equipment, the best brands in the market.
+                    Nuestros trabajos son de la mejor calidad, priorizando siempre las necesidades y el bienestar del cliente, nos
+                    También contamos con una gran variedad de equipos, las mejores marcas del mercado.
                 </p>
-                <a href="#" class="btn-2">Information</a>
+                <a href="#" class="btn-2">Información</a>
             </div>
         </div>
     </section>
@@ -125,35 +124,25 @@
         <div class="container">
             <div class="footer-row">
                 <div class="footer-links">
-                    <h4>Company</h4>
+                    <h4>Compañia</h4>
                     <ul>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="services.html">Servicios</a></li>
+                        <li><a href="contact.html">Contacto</a></li>
                         <li><a href="#"></a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-links">
-                    <h4>About</h4>
+                    <h4>Servicios</h4>
                     <ul>
-                        <li><a href="#">History</a></li>
-                        <li><a href="#">Vision</a></li>
-                        <li><a href="#">Mision</a></li>
-                        <li><a href="#"></a></li>
-                        <li><a href="#"></a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Installation</a></li>
-                        <li><a href="#">Maintenance</a></li>
+                        <li><a href="#">Instalación</a></li>
+                        <li><a href="#">Mantenimiento</a></li>
                         <li><a href="#"></a></li>
                         <li><a href="#"></a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Contact</h4>
+                    <h4>Contacto</h4>
                     <div class="social-link">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
