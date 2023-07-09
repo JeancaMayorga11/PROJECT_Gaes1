@@ -16,12 +16,12 @@ PRIMARY KEY (ID_perfil));
 
 CREATE TABLE Usuario (
 ID_usuario bigint(12) NOT NULL PRIMARY KEY  AUTO_INCREMENT,
-Email varchar(30) NOT NULL,
-Clave varchar(32) NOT NULL,
 Nombres varchar(30) NOT NULL,
 Apellidos varchar(30) NOT NULL,
 Telefono bigint(15) NOT NULL,
 Tipoidentificacion varchar(15) NOT NULL,
+Email varchar(30) NOT NULL,
+Contrasena varchar(32) NOT NULL,
 fk_ID_habilitado bigint(12) NOT NULL,
 fk_ID_perfil bigint(12) NOT NULL,
 foreign key (fk_ID_habilitado) references Habilitado (ID_habilitado),
