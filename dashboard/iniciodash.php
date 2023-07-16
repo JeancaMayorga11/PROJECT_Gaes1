@@ -59,6 +59,12 @@ $elementos = "SELECT * FROM elemento";
           </a>
         </li>
         <li>
+            <a href="consultaform.php">
+                <i class="bx bx-search-alt"></i>
+                <span>Consulta</span>
+            </a>
+            </li>
+        <li>
           <a href="cerrarsesion.php">
             <i class="bx bxs-log-out"></i>
             <span>Cerrar sesion</span>
@@ -72,12 +78,14 @@ $elementos = "SELECT * FROM elemento";
           <div class="table__header">Nombre</div>
           <div class="table__header">Cantidad</div>
           <div class="table__header">Precio Unitario</div>
+          <div class="table__header">Categoria</div>
           <div class="table__header">Operación</div>
           <?php $resultado = mysqli_query($conexion, $elementos);
         while($row=mysqli_fetch_assoc($resultado)) { ?>
             <div class="table__item"><?php echo $row["Nombre"];?></div>
             <div class="table__item"><?php echo $row["Cantidad"];?></div>
             <div class="table__item"><?php echo $row["Precio"];?></div>
+            <div class="table__item"><?php echo $row["Categoria"];?></div>
             <div class="table__item">
                 <a href="actualizar.php?id=<?php echo $row["COD_elemento"];?>" class="table__item__link__edit">Editar</a> 
                 </div>
