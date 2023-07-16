@@ -45,12 +45,12 @@ foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
 
 
 CREATE TABLE Servicio(
-ID_servicio bigint(12) not null primary key AUTO_INCREMENT,
+ID_servicio int(5) not null primary key AUTO_INCREMENT,
 Descripcion text null,
 Estado varchar(10) not null,
 fk_ID_usuario bigint(12),
-fk_ID_cita bigint(12),
-fk_ID_habilitado bigint(12),
+fk_ID_cita int(5),
+fk_ID_habilitado int(5),
 Foreign key(fk_ID_usuario) references Usuario (ID_usuario),
 Foreign key(fk_ID_cita) references cita (ID_cita),
 foreign key(fk_ID_habilitado) references Habilitado (ID_habilitado));
