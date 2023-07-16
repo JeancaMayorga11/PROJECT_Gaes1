@@ -17,7 +17,7 @@ if($filas['fk_ID_perfil']==2 ){ //Tecnico
     header("location:/iniciodash.php");
 }else
 if($filas['fk_ID_perfil']==3 ){ //Cliente
-    header("location:index.php");
+    header("location:dashcliente.php");
 }
 
 else{
