@@ -1,0 +1,58 @@
+<?php
+include("conexion.php");
+
+$citas= "SELECT * FROM Cita";
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/tablacitas.css">
+</head>
+<body>
+
+    <div class="container-table">
+        <div class="table__title">Información de citas</div>
+        <div class="table__header">ID Cita</div>
+        <div class="table__header">Ciudad</div>
+        <div class="table__header">Dirección</div>
+        <div class="table__header">Tipo de servicio</div>
+        <div class="table__header">Fecha</div>
+        <div class="table__header">Hora</div>
+    
+        <?php $resultado = mysqli_query($conexion, $citas);
+        while($row=mysqli_fetch_assoc($resultado)) { ?>
+
+            <div class="table__item"><?php echo $row["ID_cita"];?></div>
+            <div class="table__item"><?php echo $row["Ciudad"];?></div>
+            <div class="table__item"><?php echo $row["Direccion"];?></div>
+            <div class="table__item"><?php echo $row["tipo_servicio"];?></div>
+            <div class="table__item"><?php echo $row["FechaVisita"];?></div>
+            <div class="table__item"><?php echo $row["HoraVisita"];?></div>
+            
+            <?php } mysqli_free_result($resultado);?>
+    </div>
+
+    </body>
+</html>
+
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (1,'Cra. 68 #13a -22',NULL,NULL, 'Poznan', 'Mantenimiento',950,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (2,'Cra 13 #65-13',NULL,NULL, 'Cracovia', 'Instalación',951,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (3,'Cll. 19 #9-10',NULL,NULL, 'Cracovia', 'Instalación',952,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (4,'Cra 72 #99-22',NULL,NULL, 'Poznan', 'Mantenimiento',953,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (5,'Cll. 170 #19-11',NULL,NULL, 'Cracovia', 'Mantenimiento',954,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (6,'Cra. 100 #14f-12',NULL,NULL, 'Cracovia', 'Mantenimiento',955,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (7,'Cll. 100 #22-60',NULL,NULL, 'Poznan', 'Mantenimiento',956,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (8,'Cll. 22 #14-48',NULL,NULL, 'Cracovia', 'Mantenimiento',957,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (9,'Cll. 7 #2-15',NULL,NULL, 'Poznan', 'Instalación',958,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (10,'Cra. 17 #85-19',NULL,NULL, 'Poznan', 'Mantenimiento',959,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (11,'Cll. 120 #10-42',NULL,NULL, 'Poznan', 'Mantenimiento',960,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (12,'Cra. 7 #36-18',NULL,NULL, 'Cracovia', 'Mantenimiento',961,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (13,'Cra. 102 #12d-32',NULL,NULL, 'Poznan', 'Mantenimiento',962,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (14,'Cll. 19 #19-20',NULL,NULL, 'Cracovia', 'Mantenimiento',963,1);													
+INSERT INTO Cita(ID_cita, Direccion, FechaVisita, HoraVisita, Ciudad, tipo_servicio, fk_ID_usuario, fk_ID_habilitado) VALUES (15,'Cra. 40 #7-21',NULL,NULL, 'Cracovia', 'Instalación',964,1);					
+
+
