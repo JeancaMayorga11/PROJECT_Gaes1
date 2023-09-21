@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html xlmns:th=http://www.thymeleaf.org>
+<head>
+<meta charset="UTF-8">
+<title>Registro de elementos</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+	crossorigin="anonymous">
+<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+	crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+			<a class="navbar-brand" style="color: gray; margin-left: 0.8%;" href="#">Creación de elementos</a>
+
+		<div class="collapse navbar-collapse" id=collapsibleNavbar>
+		<ul class="navbar-nav">
+		<li class="nav-item">
+		<a class="nav-link" th: href=@{/estudiantes}"></a>	
+			</li>
+			</ul>
+		</div>
+	</nav>
+	
+	<br>
+	
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-6 container justify-content-center card" style="background-color:aliceblue;">
+	<h2 class=text-center>Registro de elementos</h2>
+				<div class="card-body">
+					<form th:action="@{/estudiantes}" th:object="${$estudiante}" method="post">
+						
+						
+						<div class="form-group mt-2 mb-3">
+							<label >Nombre del elemento</label>
+							<br>
+							<input type="text" name="nombre" th:field="*(nombre)" class="from-control mt-1" style="width: 80%;" placeholder= "Nombre Elemento" required >
+							</div>
+							
+							
+							<div class="form-group mt-3">
+							<label>Cantidad</label>
+							<br>
+							<input type="text" name="apellido" th:field="*(apellido)" class="from-control mt-1" style="width: 80%;"  placeholder= "Cantidad Elemento" required >
+							</div>
+							
+							
+							<div class="form-group mt-3">
+							<label>Precio del elemento</label>
+							<br>
+							<input type="text" name="email" th:field="*(email)" class="from-control mt-1" style="width: 80%;" placeholder= "Precio Elemento" required >
+							</div>
+	
+						<br>
+						<div class="box-footer">
+							<button class= "btn btn-primary">Registrar</button>
+						</div>
+						
+						
+					</form>
+				</div>
+	        </div>
+		</div>
+	</div>
+
+
+</body>
+</html>
